@@ -12,7 +12,7 @@ module.exports = {
         "no-eval": "error",
         "prefer-const": "error",
         "prefer-template": "error",
-        "no-invalid-this": "error",
+        // "no-invalid-this": "error",
         "import/no-default-export": "error",
         "no-sparse-arrays": "error",
         "no-extra-label": "error",
