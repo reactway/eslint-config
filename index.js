@@ -1,5 +1,5 @@
 module.exports = {
-    extends: ["prettier", "prettier/@typescript-eslint"],
+    extends: ["prettier", "prettier/@typescript-eslint", "prettier"],
     parser: "@typescript-eslint/parser",
     plugins: ["@typescript-eslint", "import"],
     parserOptions: {
@@ -72,7 +72,6 @@ module.exports = {
         ],
         "@typescript-eslint/generic-type-naming": ["error", "^T[A-Z][a-zA-Z]+$"],
         "@typescript-eslint/interface-name-prefix": ["error", "never"],
-        "@typescript-eslint/member-delimiter-style": "error",
         "@typescript-eslint/no-angle-bracket-type-assertion": "error",
         "@typescript-eslint/no-empty-function": "error",
         "@typescript-eslint/no-empty-interface": [
@@ -101,8 +100,8 @@ module.exports = {
         "@typescript-eslint/require-array-sort-compare": "error",
         "@typescript-eslint/require-await": "error",
         "@typescript-eslint/restrict-plus-operands": "error",
-        "@typescript-eslint/semi": ["error", "always", { omitLastInOneLineBlock: false }],
-        "@typescript-eslint/type-annotation-spacing": "error",
+        // "@typescript-eslint/semi": ["error", "always", { omitLastInOneLineBlock: false }],
+        // "@typescript-eslint/type-annotation-spacing": "error",
         "@typescript-eslint/unified-signatures": "error"
     }
 };
