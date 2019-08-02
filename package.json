@@ -1,6 +1,6 @@
 {
     "name": "@reactway/eslint-config",
-    "version": "1.0.0-alpha.2",
+    "version": "1.0.0-alpha.3",
     "description": "Reactway's ESLint guidelines for TypeScript projects.",
     "main": "index.js",
     "scripts": {},
@@ -15,12 +15,14 @@
     "license": "MIT",
     "peerDependencies": {
         "eslint": "^6.0.1",
-        "typescript": "^3.5.3"
+        "typescript": "^3.5.3",
+        "prettier": "^1.18.2"
     },
     "dependencies": {
         "@typescript-eslint/eslint-plugin": "^1.13.0",
         "@typescript-eslint/parser": "^1.13.0",
         "eslint-config-prettier": "^6.0.0",
+        "eslint-plugin-prettier": "^3.1.0",
         "eslint-plugin-import": "^2.18.2",
         "eslint-plugin-react": "^7.14.3",
         "eslint-plugin-react-hooks": "^1.6.1"

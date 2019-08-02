@@ -1,5 +1,5 @@
 module.exports = {
-    extends: "@reactway",
+    extends: ["@reactway", "prettier/react"],
     plugins: ["react", "react-hooks"],
     settings: {
         react: {
@@ -15,6 +15,6 @@ module.exports = {
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error",
         "react/button-has-type": "error",
-        "react/no-string-refs": "error"
+        "react/no-string-refs": "error",
     }
 };
