@@ -1,6 +1,6 @@
 {
     "name": "@reactway/eslint-config",
-    "version": "1.0.0-alpha.4",
+    "version": "1.0.0-alpha.5",
     "description": "Reactway's ESLint guidelines for TypeScript projects.",
     "main": "index.js",
     "scripts": {},

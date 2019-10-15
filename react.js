@@ -15,6 +15,6 @@ module.exports = {
         "react-hooks/exhaustive-deps": "error",
         "react/button-has-type": "error",
         "react/no-string-refs": "error",
-        "react/jsx-boolean-value": ["error", "always"]
+        "react/jsx-boolean-value": ["error", "never"]
     }
 };
