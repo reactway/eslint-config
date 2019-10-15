@@ -7,7 +7,6 @@ module.exports = {
         }
     },
     rules: {
-        // "@typescript-eslint/no-unused-vars": "off",
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
         "react/jsx-key": "error",
@@ -16,5 +15,6 @@ module.exports = {
         "react-hooks/exhaustive-deps": "error",
         "react/button-has-type": "error",
         "react/no-string-refs": "error",
+        "react/jsx-boolean-value": ["error", "always"]
     }
 };
