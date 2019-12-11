@@ -1,0 +1,8 @@
+{
+    "extends": "../../index.js",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "project": "./test-lint/react/tsconfig.json",
+        "sourceType": "module"
+    }
+}

@@ -72,7 +72,7 @@ module.exports = {
         ],
         "@typescript-eslint/generic-type-naming": ["error", "^T[A-Z][a-zA-Z]+$"],
         "@typescript-eslint/interface-name-prefix": ["error", "never"],
-        "@typescript-eslint/no-angle-bracket-type-assertion": "error",
+        // "@typescript-eslint/no-angle-bracket-type-assertion": "error",
         "@typescript-eslint/no-empty-function": "error",
         "@typescript-eslint/no-empty-interface": [
             "error",
