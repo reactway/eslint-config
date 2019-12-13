@@ -1,23 +1,29 @@
 module.exports = {
-    extends: ["prettier", "prettier/@typescript-eslint", "prettier"],
+    extends: ["plugin:@typescript-eslint/recommended"],
     parser: "@typescript-eslint/parser",
-    plugins: ["@typescript-eslint", "import"],
+    plugins: ["import"],
     parserOptions: {
         ecmaVersion: 6,
         project: "./tsconfig.json",
         sourceType: "module"
     },
     rules: {
+        //#region ESlint rules.
         eqeqeq: ["error", "always", { null: "ignore" }],
-        "no-eval": "error",
-        "prefer-const": "error",
-        "prefer-template": "error",
-        // "no-invalid-this": "error",
-        "import/no-default-export": "error",
-        "no-sparse-arrays": "error",
-        "no-extra-label": "error",
+        //#endregion
+        //#region TypeScript ESlint Recommended rules.
+        "@typescript-eslint/consistent-type-assertions": ["error", { assertionStyle: "as", objectLiteralTypeAssertions: "never" }],
+        "@typescript-eslint/no-empty-function": "warn",
+        "@typescript-eslint/no-empty-interface": "warn",
+        "@typescript-eslint/no-use-before-define": "warn",
+        "@typescript-eslint/prefer-includes": "error",
+        "@typescript-eslint/require-await": "warn",
+        "@typescript-eslint/unbound-method": "error",
+        //#endregion
+        //#region TypeScript ESlint rules.
+        "@typescript-eslint/array-type": ["error", { default: "array-simple" }],
         "@typescript-eslint/explicit-member-accessibility": [
-            "error",
+            "warn",
             {
                 accessibility: "explicit",
                 overrides: {
@@ -29,79 +35,33 @@ module.exports = {
                 }
             }
         ],
-        "no-multiple-empty-lines": ["error", { max: 1 }],
-        quotes: ["error", "double", { allowTemplateLiterals: true }],
-        "jsx-quotes": ["error", "prefer-double"],
-        "no-console": ["error", { allow: ["warn", "error", "info"] }],
-        "no-shadow": "error",
         "@typescript-eslint/generic-type-naming": "error",
-        "@typescript-eslint/adjacent-overload-signatures": "error",
-        "@typescript-eslint/ban-ts-ignore": "error",
-        "@typescript-eslint/ban-types": [
-            "error",
-            {
-                types: {
-                    String: {
-                        message: "Use string instead",
-                        fixWith: "string"
-                    },
-                    Object: {
-                        message: "Use {} instead.",
-                        fixWith: "{}"
-                    },
-                    object: {
-                        message: "Use {} instead.",
-                        fixWith: "{}"
-                    },
-                    Function: {
-                        message: "Use () => void instead.",
-                        fixWith: "() => void"
-                    }
-                }
-            }
-        ],
-        "@typescript-eslint/camelcase": ["error", { properties: "always" }],
-        "@typescript-eslint/class-name-casing": "error",
-        "@typescript-eslint/explicit-function-return-type": [
-            "error",
-            {
-                allowExpressions: true,
-                allowTypedFunctionExpressions: true,
-                allowHigherOrderFunctions: true
-            }
-        ],
-        "@typescript-eslint/generic-type-naming": ["error", "^T[A-Z][a-zA-Z]+$"],
-        "@typescript-eslint/interface-name-prefix": ["error", "never"],
-        // "@typescript-eslint/no-angle-bracket-type-assertion": "error",
-        "@typescript-eslint/no-empty-function": "error",
-        "@typescript-eslint/no-empty-interface": [
-            "error",
-            {
-                allowSingleExtends: true
-            }
-        ],
-        "@typescript-eslint/no-explicit-any": [
-            "error",
-            {
-                fixToUnknown: true
-            }
-        ],
-        "@typescript-eslint/no-for-in-array": "error",
-        "@typescript-eslint/no-misused-new": "error",
-        "@typescript-eslint/no-namespace": "error",
-        "@typescript-eslint/no-non-null-assertion": "error",
-        "@typescript-eslint/no-require-imports": "error",
-        "@typescript-eslint/no-unnecessary-type-assertion": "error",
-        "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
-        "@typescript-eslint/no-useless-constructor": "error",
-        "@typescript-eslint/no-var-requires": "error",
-        "@typescript-eslint/prefer-function-type": "error",
-        // "@typescript-eslint/promise-function-async": "error",
-        "@typescript-eslint/require-array-sort-compare": "error",
-        "@typescript-eslint/require-await": "error",
-        "@typescript-eslint/restrict-plus-operands": "error",
-        // "@typescript-eslint/semi": ["error", "always", { omitLastInOneLineBlock: false }],
-        // "@typescript-eslint/type-annotation-spacing": "error",
-        "@typescript-eslint/unified-signatures": "error"
+        // TODO: @typescript-eslint/member-ordering
+        "@typescript-eslint/no-dynamic-delete": "error",
+        "@typescript-eslint/no-extra-non-null-assertion": "warn",
+        "@typescript-eslint/no-extraneous-class": "warn",
+        "@typescript-eslint/no-floating-promises": "warn",
+        // TODO: "@typescript-eslint/no-magic-numbers": "warn",
+        "@typescript-eslint/no-unnecessary-condition": "error",
+        // TODO: =========================== Need to check.
+        "@typescript-eslint/no-unnecessary-qualifier": "warn",
+        "@typescript-eslint/no-unnecessary-type-arguments": "warn",
+        // TODO: @typescript-eslint/no-unused-expressions ???
+        "@typescript-eslint/no-useless-constructor": "warn",
+        "@typescript-eslint/prefer-for-of": "warn",
+        "@typescript-eslint/prefer-function-type": "warn",
+        "@typescript-eslint/prefer-nullish-coalescing": "error",
+        "@typescript-eslint/prefer-optional-chain": "error",
+        "@typescript-eslint/prefer-readonly": "warn",
+        "@typescript-eslint/promise-function-async": "warn",
+        // TODO: @typescript-eslint/quotes ???
+        "@typescript-eslint/require-array-sort-compare": "warn",
+        // TODO: @typescript-eslint/restrict-plus-operands ???
+        // TODO: @typescript-eslint/restrict-template-expressions ???
+        // TODO: "@typescript-eslint/return-await": ["error/warn", "in-try-catch"], Need to validate.
+        "@typescript-eslint/strict-boolean-expressions": "warn",
+        "@typescript-eslint/typedef": "warn",
+        "@typescript-eslint/unified-signatures": "warn"
+        //#endregion
     }
 };
