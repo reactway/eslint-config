@@ -11,6 +11,15 @@ module.exports = {
         //#region ESlint rules.
         eqeqeq: ["error", "always", { null: "ignore" }],
         //#endregion
+        //#region Import rules.
+        // TODO: "import/no-internal-modules": "error",
+        "import/no-useless-path-segments": "warn",
+        // TODO: "import/no-self-import": "error", Check why it doesn't work.
+        "import/no-default-export": "error",
+        "import/no-anonymous-default-export": "error",
+        "import/newline-after-import": ["warn", { count: 1 }],
+        // TODO: "import/order"
+        //#endregion
         //#region TypeScript ESlint Recommended rules.
         "@typescript-eslint/consistent-type-assertions": ["error", { assertionStyle: "as", objectLiteralTypeAssertions: "never" }],
         "@typescript-eslint/no-empty-function": "warn",
