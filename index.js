@@ -33,6 +33,7 @@ module.exports = {
         //#endregion
 
         //#region TypeScript ESlint Recommended rules.
+        "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
         "@typescript-eslint/consistent-type-assertions": ["error", { assertionStyle: "as", objectLiteralTypeAssertions: "never" }],
         "@typescript-eslint/no-empty-function": "warn",
         "@typescript-eslint/no-empty-interface": "warn",
@@ -71,11 +72,10 @@ module.exports = {
         "@typescript-eslint/no-extra-non-null-assertion": "warn",
         "@typescript-eslint/no-extraneous-class": "warn",
         "@typescript-eslint/no-floating-promises": "warn",
-        "@typescript-eslint/no-magic-numbers": ["error", { ignoreEnums: true }],
+        // TODO: "@typescript-eslint/no-magic-numbers": ["error", { ignoreEnums: true }],
         "@typescript-eslint/no-unnecessary-condition": "error",
-        // TODO: =========================== Need to check.
         "@typescript-eslint/no-unnecessary-qualifier": "warn",
-        "@typescript-eslint/no-unnecessary-type-arguments": "warn",
+        // TODO: "@typescript-eslint/no-unnecessary-type-arguments": "warn", It doesn't work well with react hooks.
         "@typescript-eslint/no-unused-expressions": "warn",
         "@typescript-eslint/no-useless-constructor": "warn",
         "@typescript-eslint/prefer-for-of": "warn",
@@ -91,7 +91,9 @@ module.exports = {
         "@typescript-eslint/return-await": ["error", "in-try-catch"],
         "@typescript-eslint/strict-boolean-expressions": "warn",
         // TODO: "@typescript-eslint/typedef": "warn", Maybe we don't need to use this.
-        "@typescript-eslint/unified-signatures": "warn"
+        "@typescript-eslint/unified-signatures": "warn",
         //#endregion
+
+        "prettier/prettier": "warn"
     }
 };
