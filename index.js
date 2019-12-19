@@ -57,6 +57,14 @@ module.exports = {
                 }
             }
         ],
+        "@typescript-eslint/explicit-function-return-type": [
+            "error",
+            {
+                allowExpressions: true,
+                allowTypedFunctionExpressions: true,
+                allowHigherOrderFunctions: true
+            }
+        ],
         "@typescript-eslint/generic-type-naming": "error",
         // TODO: @typescript-eslint/member-ordering
         "@typescript-eslint/no-dynamic-delete": "error",
@@ -82,7 +90,7 @@ module.exports = {
         // TODO: @typescript-eslint/restrict-template-expressions ???
         "@typescript-eslint/return-await": ["error", "in-try-catch"],
         "@typescript-eslint/strict-boolean-expressions": "warn",
-        "@typescript-eslint/typedef": "warn",
+        // TODO: "@typescript-eslint/typedef": "warn", Maybe we don't need to use this.
         "@typescript-eslint/unified-signatures": "warn"
         //#endregion
     }
