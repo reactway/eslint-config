@@ -31,6 +31,7 @@ module.exports = {
         "react-hooks/exhaustive-deps": "warn",
         "react/button-has-type": "warn",
         "react/no-string-refs": "error",
-        "react/jsx-boolean-value": ["warn", "never"]
+        "react/jsx-boolean-value": ["warn", "never"],
+        "prettier/prettier": "warn"
     }
 };
