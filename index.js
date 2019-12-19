@@ -13,7 +13,14 @@ module.exports = {
     rules: {
         //#region ESlint rules.
         eqeqeq: ["error", "always", { null: "ignore" }],
+        "no-eval": "error",
+        "prefer-const": "warn",
         "guard-for-in": "error",
+        "no-sparse-arrays": "error",
+        "no-extra-label": "warn",
+        "jsx-quotes": ["error", "prefer-double"],
+        "no-console": ["warn", { allow: ["warn", "error", "info"] }],
+        "no-shadow": "warn",
         //#endregion
 
         //#region Import rules.
