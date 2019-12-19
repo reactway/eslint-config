@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "noEmit": true,
+        "module": "commonjs",
+        "target": "ES5",
+        "jsx": "react",
+        "lib": ["ES6", "DOM"],
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "strict": true
+    }
+}
