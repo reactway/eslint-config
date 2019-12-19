@@ -1,5 +1,6 @@
+import "./styles.scss";
 import React from "react";
 
 export const App: React.FC = () => {
-    return <div />
-}
+    return <div />;
+};
