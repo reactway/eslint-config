@@ -8,30 +8,29 @@ module.exports = {
     },
     rules: {
         //#region Import rules.
-        // TODO: Uncomment this when rule is fixed.
-        // "import/order": [
-        //     "warn",
-        //     {
-        //         groups: ["builtin", "external", "internal", "parent", "sibling", "index"],
-        //         pathGroups: [
-        //             {
-        //                 pattern: "./*.scss",
-        //                 group: "index",
-        //                 position: "after"
-        //             }
-        //         ]
-        //     }
-        // ],
+        "import/order": [
+            "warn",
+            {
+                groups: ["builtin", "external", "internal", "parent", "sibling", "index"],
+                pathGroups: [
+                    {
+                        pattern: "./*.scss",
+                        group: "index",
+                        position: "after"
+                    }
+                ]
+            }
+        ],
         //#endregion
 
-        "react/jsx-uses-react": "error",
+        "react/jsx-uses-react": "warn",
         "react/jsx-uses-vars": "error",
         "react/jsx-key": "error",
         "react/jsx-pascal-case": "error",
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "error",
-        "react/button-has-type": "error",
+        "react-hooks/rules-of-hooks": "warn",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/button-has-type": "warn",
         "react/no-string-refs": "error",
-        "react/jsx-boolean-value": ["error", "never"]
+        "react/jsx-boolean-value": ["warn", "never"]
     }
 };

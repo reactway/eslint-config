@@ -1,11 +1,14 @@
 module.exports = {
-    extends: ["plugin:@typescript-eslint/recommended"],
+    extends: ["plugin:@typescript-eslint/recommended", "prettier/@typescript-eslint", "plugin:prettier/recommended"],
     parser: "@typescript-eslint/parser",
     plugins: ["import"],
     parserOptions: {
         ecmaVersion: 6,
         project: "./tsconfig.json",
-        sourceType: "module"
+        sourceType: "module",
+        ecmaFeatures: {
+            jsx: true // Allows for the parsing of JSX
+        }
     },
     rules: {
         //#region ESlint rules.
@@ -53,7 +56,7 @@ module.exports = {
         "@typescript-eslint/no-extra-non-null-assertion": "warn",
         "@typescript-eslint/no-extraneous-class": "warn",
         "@typescript-eslint/no-floating-promises": "warn",
-        "@typescript-eslint/no-magic-numbers": ["error", { "ignoreEnums": true }],
+        "@typescript-eslint/no-magic-numbers": ["error", { ignoreEnums: true }],
         "@typescript-eslint/no-unnecessary-condition": "error",
         // TODO: =========================== Need to check.
         "@typescript-eslint/no-unnecessary-qualifier": "warn",
