@@ -1,6 +1,9 @@
 # @reactway/eslint-config
 
-Reactway's ESLint guidelines for TypeScript projects.
+[![npm](https://img.shields.io/npm/v/@reactway/eslint-config)](https://www.npmjs.com/package/@reactway/eslint-config)
+[![Azure DevOps builds](https://img.shields.io/azure-devops/build/reactway/reactway/8)](https://dev.azure.com/reactway/ReactWay/_build?definitionId=8&_a=summary)
+
+Reactway's ESLint guidelines for TypeScript projects. Based on [@typescript-eslint/recommended](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules) and [prettier/@typescript-eslint](https://github.com/prettier/eslint-config-prettier).
 
 ## Get started
 
