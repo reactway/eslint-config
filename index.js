@@ -15,6 +15,7 @@ module.exports = {
         eqeqeq: ["error", "always", { null: "ignore" }],
         "no-eval": "error",
         "prefer-const": "warn",
+        "prefer-template": "warn",
         "guard-for-in": "error",
         "no-sparse-arrays": "error",
         "no-extra-label": "warn",
