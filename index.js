@@ -38,7 +38,10 @@ module.exports = {
         "@typescript-eslint/consistent-type-assertions": ["error", { assertionStyle: "as", objectLiteralTypeAssertions: "never" }],
         "@typescript-eslint/no-empty-function": "warn",
         "@typescript-eslint/no-empty-interface": "warn",
-        "@typescript-eslint/no-use-before-define": "warn",
+        "@typescript-eslint/no-use-before-define": [
+            "warn",
+            { functions: false, classes: false, enums: false, variables: true, typedefs: false }
+        ],
         "@typescript-eslint/prefer-includes": "error",
         "@typescript-eslint/require-await": "warn",
         "@typescript-eslint/unbound-method": "error",
