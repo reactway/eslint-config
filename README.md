@@ -31,6 +31,17 @@ Create config file in project root folder `.eslintrc.json`.
 }
 ```
 
+### Troubleshooting
+
+#### 1. 'React' is defined but never used.
+
+If you're getting errors like:
+```
+C:\project-path\file-name.tsx(1,8): warning @typescript-eslint/no-unused-vars : 'React' is defined but never used.
+```
+
+Most probably you're configuring a React project and extended a non-React eslint config.
+
 ## License
 
 Released under the [MIT license](LICENSE).
