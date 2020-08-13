@@ -7,22 +7,6 @@ module.exports = {
         }
     },
     rules: {
-        //#region Import rules.
-        "import/order": [
-            "warn",
-            {
-                groups: ["builtin", "external", "internal", "parent", "sibling", "index"],
-                pathGroups: [
-                    {
-                        pattern: "./*.scss",
-                        group: "index",
-                        position: "after"
-                    }
-                ]
-            }
-        ],
-        //#endregion
-
         "react/jsx-uses-react": "warn",
         "react/jsx-uses-vars": "error",
         "react/jsx-key": "error",
@@ -32,6 +16,7 @@ module.exports = {
         "react/button-has-type": "warn",
         "react/no-string-refs": "error",
         "react/jsx-boolean-value": ["warn", "never"],
-        "prettier/prettier": "warn"
+        "prettier/prettier": "warn",
+        "import/no-default-export": "off"
     }
 };
