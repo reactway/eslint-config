@@ -30,7 +30,6 @@ module.exports = {
         "import/no-default-export": "error",
         "import/no-anonymous-default-export": "error",
         "import/newline-after-import": ["warn", { count: 1 }],
-        // TODO: Uncomment this when rule is fixed. +"import/order": ["warn", { groups: ["builtin", "external", "internal", "parent", "sibling", "index"] }],
         //#endregion
 
         //#region TypeScript ESlint Recommended rules.
@@ -48,7 +47,13 @@ module.exports = {
         //#endregion
 
         //#region TypeScript ESlint rules.
-        "@typescript-eslint/array-type": ["error", { default: "array-simple" }],
+        "@typescript-eslint/array-type": [
+            "error",
+            {
+                default: "array-simple",
+                readonly: "generic"
+            }
+        ],
         "@typescript-eslint/explicit-member-accessibility": [
             "warn",
             {
@@ -60,14 +65,6 @@ module.exports = {
                     properties: "explicit",
                     parameterProperties: "explicit"
                 }
-            }
-        ],
-        "@typescript-eslint/explicit-function-return-type": [
-            "error",
-            {
-                allowExpressions: true,
-                allowTypedFunctionExpressions: true,
-                allowHigherOrderFunctions: true
             }
         ],
         "@typescript-eslint/generic-type-naming": "error",
@@ -88,7 +85,7 @@ module.exports = {
         "@typescript-eslint/prefer-optional-chain": "error",
         "@typescript-eslint/prefer-readonly": "warn",
         "@typescript-eslint/promise-function-async": "warn",
-        "@typescript-eslint/quotes": ["warn", "double", { allowTemplateLiterals: true }],
+        "@typescript-eslint/quotes": ["warn", "double", { allowTemplateLiterals: true, avoidEscape: true }],
         "@typescript-eslint/require-array-sort-compare": "warn",
         // TODO: @typescript-eslint/restrict-plus-operands ???
         // TODO: @typescript-eslint/restrict-template-expressions ???
@@ -96,6 +93,12 @@ module.exports = {
         "@typescript-eslint/strict-boolean-expressions": "warn",
         // TODO: "@typescript-eslint/typedef": "warn", Maybe we don't need to use this.
         "@typescript-eslint/unified-signatures": "warn",
+        "@typescript-eslint/no-inferrable-types": [
+            "warn",
+            {
+                ignoreParameters: true
+            }
+        ],
         //#endregion
 
         "prettier/prettier": "warn"
