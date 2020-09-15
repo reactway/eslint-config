@@ -67,7 +67,20 @@ module.exports = {
                 }
             }
         ],
-        "@typescript-eslint/generic-type-naming": "error",
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                selector: "typeParameter",
+                format: ["PascalCase"],
+                prefix: ["T"]
+            }
+        ],
+        "@typescript-eslint/explicit-module-boundary-types": [
+            "warn",
+            {
+                allowDirectConstAssertionInArrowFunctions: false
+            }
+        ],
         // TODO: @typescript-eslint/member-ordering
         "@typescript-eslint/no-dynamic-delete": "error",
         "@typescript-eslint/no-extra-non-null-assertion": "warn",
