@@ -75,12 +75,7 @@ module.exports = {
                 prefix: ["T"]
             }
         ],
-        "@typescript-eslint/explicit-module-boundary-types": [
-            "warn",
-            {
-                allowDirectConstAssertionInArrowFunctions: false
-            }
-        ],
+        "@typescript-eslint/explicit-module-boundary-types": "off",
         // TODO: @typescript-eslint/member-ordering
         "@typescript-eslint/no-dynamic-delete": "error",
         "@typescript-eslint/no-extra-non-null-assertion": "warn",
