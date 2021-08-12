@@ -1,6 +1,6 @@
 {
     "name": "@reactway/eslint-config",
-    "version": "1.0.4",
+    "version": "1.0.5-alpha",
     "description": "Reactway's ESLint guidelines for TypeScript projects.",
     "main": "index.js",
     "scripts": {
@@ -17,27 +17,27 @@
     "author": "Reactway <dev@reactway.com> (https://github.com/reactway)",
     "license": "MIT",
     "peerDependencies": {
-        "eslint": "^7.6.0",
-        "typescript": "^3.9.7",
-        "prettier": "^2.0.5"
+        "eslint": "^7.32.0",
+        "typescript": "^4.3.5",
+        "prettier": "^2.3.2"
     },
     "files": [
         "*.js"
     ],
     "dependencies": {
-        "@typescript-eslint/eslint-plugin": "^3.9.0",
-        "@typescript-eslint/parser": "^3.9.0",
-        "eslint-config-prettier": "^6.11.0",
-        "eslint-plugin-prettier": "^3.1.4",
-        "eslint-plugin-import": "^2.22.0",
-        "eslint-plugin-react": "^7.20.5",
-        "eslint-plugin-react-hooks": "^4.0.8"
+        "@typescript-eslint/eslint-plugin": "^4.29.1",
+        "@typescript-eslint/parser": "^4.29.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-import": "^2.24.0",
+        "eslint-plugin-react": "^7.24.0",
+        "eslint-plugin-react-hooks": "^4.2.0"
     },
     "devDependencies": {
         "@types/react": "^16.9.46",
-        "eslint": "^7.6.0",
-        "prettier": "^2.0.5",
+        "eslint": "^7.32.0",
+        "prettier": "^2.3.2",
         "react": "^16.13.1",
-        "typescript": "^3.9.7"
+        "typescript": "^4.3.5"
     }
 }
